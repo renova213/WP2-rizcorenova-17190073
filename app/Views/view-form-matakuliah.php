@@ -7,6 +7,7 @@
 <body>
     <center>
         <form action="<?= base_url('matakuliah/cetak'); ?>" method="post">
+            <?= csrf_field(); ?>
             <table>
                 <tr>
                     <th colspan="3">

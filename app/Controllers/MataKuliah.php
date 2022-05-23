@@ -10,12 +10,15 @@ class matakuliah extends BaseController
     }
     public function cetak()
     {
-        $data = [
-            'kode' => $this->input->post('kode'),
-            'nama' => $this->input->post('nama'),
-            'sks' => $this->input->post('sks')
-        ];
 
+        if (!$this->validate(['kode' => 'required', 'nama' => 'required', 'sks' => 'required'])) {
+            return view('view-form-matakuliah');
+        }
+        $data = [
+            'kode' => $this->request->getVar('kode'),
+            'nama' => $this->request->getVar('nama'),
+            'sks' => $this->request->getVar('sks')
+        ];
         return view('view-data-matakuliah', $data);
     }
 }
