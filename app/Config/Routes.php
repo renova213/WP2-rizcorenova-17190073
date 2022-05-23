@@ -34,6 +34,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/pertemuan1', 'Pertemuan1::index');
 $routes->get('/latihan1', 'Latihan1::index');
+$routes->get('/matakuliah', 'matakuliah::index');
+$routes->get('/web', 'Web::index');
 
 /*
  * --------------------------------------------------------------------
